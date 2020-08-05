@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/Person" name="PeresonAPI2" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET" uri-template="/queryPerson">
+        <inSequence>
+            <log description="request log ">
+                <property name="message" value="Welcome................!!!!!"/>
+            </log>
+            <send>
+                <endpoint key="GetEndPoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/AddPerson">
+        <inSequence>
+            <property expression="json-eval($.personName)" name="PersonProperty" scope="default" type="STRING"/>
+            <datamapper config="gov:datamapper/NewConfig.dmc" inputSchema="gov:datamapper/NewConfig_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/NewConfig_outputSchema.json" outputType="XML" xsltStyleSheet="gov:datamapper/NewConfig_xsltStyleSheet.xml"/>
+            <switch source=" get-property('PersonProperty')">
+                <case regex="Curl">
+                    <log description="First Service Log" level="custom">
+                        <property expression="fn:concat('Routing to ', get-property('PersonProperty'))" name="message"/>
+                    </log>
+                    <send>
+                        <endpoint key="PostEndPoint"/>
+                    </send>
+                </case>
+                <case regex="Pune personname">
+                    <log description="Second service log" level="custom">
+                        <property expression="fn:concat('Routing to ', get-property('PersonProperty'))" name="message"/>
+                    </log>
+                    <send>
+                        <endpoint key="PostEndPointBkp"/>
+                    </send>
+                </case>
+                <default>
+                    <log description="Fault log" level="custom">
+                        <property expression="fn:concat('Invalid PersonList - ', get-property('PersonProperty'))" name="message"/>
+                    </log>
+                    <respond description="respond"/>
+                </default>
+            </switch>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

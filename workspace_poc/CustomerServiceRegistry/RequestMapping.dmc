@@ -1,0 +1,21 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+var SPLIT_4_0 = '';
+
+SPLIT_4_0 = inputroot.customerAddress.split(',');
+outputroot =  {};
+outputroot.customerName = inputroot.customerName;
+outputroot.customerAddress =  {};
+outputroot.customerAddress.subaddress1 = SPLIT_4_0[0];
+outputroot.customerAddress.subaddress2 = SPLIT_4_0[1];
+outputroot.customerAddress.subaddress3 = SPLIT_4_0[2];
+outputroot.customerEmail = inputroot.customerEmail;
+return outputroot;
+};
+
+
+
+
+
+
+

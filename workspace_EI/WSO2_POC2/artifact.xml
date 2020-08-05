@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="GetEndPoint" groupId="com.example.WSO2_POC2.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetEndPoint.xml</file>
+    </artifact>
+    <artifact name="PeresonAPI2" groupId="com.example.WSO2_POC2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/PeresonAPI2.xml</file>
+    </artifact>
+    <artifact name="PostEndPoint" groupId="com.example.WSO2_POC2.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/PostEndPoint.xml</file>
+    </artifact>
+    <artifact name="PostEndPointBkp" groupId="com.example.WSO2_POC2.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/PostEndPointBkp.xml</file>
+    </artifact>
+</artifacts>

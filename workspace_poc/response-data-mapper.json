@@ -1,0 +1,10 @@
+{
+"customerName":"Teja Teja",
+"customerAddress":
+{
+"subaddress1":"101",
+ "subaddress2":"Mumbai",
+ "subaddress3":"India"
+},
+"customerEmail":"teja.teja@yahoo.com"
+}

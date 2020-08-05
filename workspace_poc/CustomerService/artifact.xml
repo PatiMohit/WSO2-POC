@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="ResidentialEndPoint" groupId="com.example.CustomerService.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ResidentialEndPoint.xml</file>
+    </artifact>
+    <artifact name="CommercialEndPoint" groupId="com.example.CustomerService.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/CommercialEndPoint.xml</file>
+    </artifact>
+    <artifact name="CustomerAPI" groupId="com.example.CustomerService.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CustomerAPI.xml</file>
+    </artifact>
+    <artifact name="CustomerAPI" groupId="com.example.CustomerService.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CustomerAPI.xml</file>
+    </artifact>
+</artifacts>

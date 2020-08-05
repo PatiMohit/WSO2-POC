@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/customer" name="CustomerAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET" uri-template="/addCustomer">
+        <inSequence>
+            <property expression="json-eval($.customerEmail)" name="CustomerProperty" scope="default" type="STRING"/>
+            <datamapper config="gov:datamapper/RequestMapping.dmc" description="mapper" inputSchema="gov:datamapper/RequestMapping_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/RequestMapping_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/RequestMapping_xsltStyleSheet.xml"/>
+            <switch source="get-property('CustomerProperty')">
+                <case regex=".*@gmail.*">
+                    <log level="custom">
+                        <property expression="fn:concat('Routing gmail to ', get-property('CustomerProperty'))" name="message"/>
+                    </log>
+                    <send>
+                        <endpoint key="ResidentialEndPoint"/>
+                    </send>
+                </case>
+                <case regex=".*@yahoo.*">
+                    <log level="custom">
+                        <property expression="fn:concat('Routing yahoo to ', get-property('CustomerProperty'))" name="message"/>
+                    </log>
+                    <send>
+                        <endpoint key="ResidentialEndPoint"/>
+                    </send>
+                </case>
+                <default>
+                    <log level="custom">
+                        <property expression="fn:concat('Routing to default commercial ', get-property('CustomerProperty'))" name="messsage"/>
+                    </log>
+                    <send>
+                        <endpoint key="CommercialEndPoint"/>
+                    </send>
+                </default>
+            </switch>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

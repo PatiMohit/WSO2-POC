@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="NewResource" groupId="com.example.WSO2_POC2.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewResource.dmc</file>
+            <path>/_system/config/myresources</path>
+            <mediaType/>
+        </item>
+    </artifact>
+    <artifact name="RequestMappingNew" groupId="com.example.WSO2_POC2.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>RequestMappingNew.dmc</file>
+            <path>/_system/config/myresources</path>
+            <mediaType/>
+        </item>
+    </artifact>
+    <artifact name="NewConfig" groupId="com.example.WSO2_POC2.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+        <artifact name="NewConfig_outputSchema" groupId="com.example.WSO2_POC2.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+        <artifact name="NewConfig" groupId="com.example.WSO2_POC2.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="NewConfig_xsltStyleSheet" groupId="com.example.WSO2_POC2.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="NewConfig1" groupId="com.example.WSO2_POC2.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig1.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+        <artifact name="NewCfact>
+    </artifacts>

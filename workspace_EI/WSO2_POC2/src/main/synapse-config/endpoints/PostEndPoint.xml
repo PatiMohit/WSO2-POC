@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="PostEndPoint" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="post" uri-template="http://172.24.132.17:8080/wsoPOCApp/createPerson"/>
+</endpoint>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;WSO2_POCService/src/main/synapse-config/endpoints/QueryPerson.xml&apos;" deleteContents="false" description="Delete resource &apos;WSO2_POCService/src/main/synapse-config/endpoints/QueryPerson.xml&apos;" element1="/WSO2_POCService/src/main/synapse-config/endpoints/QueryPerson.xml" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1568202488285"/>
+</session>

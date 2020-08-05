@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/Person" name="PeresonAPI2" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET" uri-template="/queryPerson">
+        <inSequence>
+            <log description="request log ">
+                <property name="message" value="Welcome................!!!!!"/>
+            </log>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

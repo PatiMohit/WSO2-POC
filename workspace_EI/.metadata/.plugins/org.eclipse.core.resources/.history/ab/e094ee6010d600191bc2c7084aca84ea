@@ -1,0 +1,3 @@
+<api xmlns="http://ws.apache.org/ns/synapse" context="/getPersons" name="PeresonAPI2">
+<resource methods="GET"><inSequence/><outSequence/><faultSequence/></resource>
+</api>
